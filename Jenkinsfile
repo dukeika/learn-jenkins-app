@@ -20,7 +20,11 @@ pipeline {
                 '''
             }
         }
-        stage('Hello') {
+        stage('Test') {
+            steps {
+                echo 'Test Stage'
+            }
+        }stage('Hello') {
             steps {
                 echo 'Hello World'
             }
