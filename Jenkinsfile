@@ -24,6 +24,8 @@ pipeline {
             steps {
                 echo 'Test Stage'
                 sh '''
+                node -v
+                npm -v
                 ls -l build/index.html
                 npm run test
                 '''
