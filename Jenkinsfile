@@ -24,10 +24,10 @@ pipeline {
             steps {
                 echo 'Test Stage'
                 sh '''
-                node -v
-                npm -v
+                node --version
+                npm --version
                 ls -l build/index.html
-                npm run test
+                npm  test
                 '''
             }
         }
