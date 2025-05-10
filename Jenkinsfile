@@ -23,11 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test Stage'
-                if [ -f build/index.html ]; then
-  echo "File exists: build/index.html"
-else
-  echo "Error: File not found - build/index.html"
-fi
+                test -f build/index.html
             }
         }
         stage('Hello') {
