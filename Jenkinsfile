@@ -4,7 +4,7 @@ pipeline {
     environment{
         NETLIFY_SITE_ID = '8ee830fa-cb67-420b-a3f8-7b427382a7f6'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
-        CI_ENVIRONMENT_URL = 'https://spiffy-pothos-f0c6ca.netlify.app/'
+        CI_ENVIRONMENT_URL = 'https://spiffy-pothos-f0c6ca.netlify.app'
     }
 
     stages {
@@ -38,7 +38,7 @@ pipeline {
                             steps {
                                 
                                 sh '''
-                                echo "Small Change"
+                                echo "Small Changes"
                                 npm install serve
                                 node_modules/.bin/serve -s build &
                                 sleep 10
